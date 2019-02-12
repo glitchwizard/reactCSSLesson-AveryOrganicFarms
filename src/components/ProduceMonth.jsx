@@ -6,14 +6,15 @@ import SeasonalOfferings from './SeasonalOfferings';
 const fullPage = {
   height: '100vh',
   background: 'tan',
-  overflow: 'auto',
-  maxWidth: '300px'
+  display: 'grid',
+  gridTemplate: 'repeat(3, 1fr) / repeat(4, 1fr)',
+  border: '1px solid black'
 };
 
 function ProduceMonth() {
   return (
     <div style={fullPage}>
-      <hr/>
+
       {data.availableProduce.map((monthObject, index)  =>
         <SeasonalOfferings
         month = {monthObject.month}
