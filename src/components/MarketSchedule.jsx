@@ -1,10 +1,15 @@
 import React from 'react';
-import * as data from './masterSchedule';
+import * as data from './data/masterSchedule';
 import MarketDay from './MarketDay';
+
+
+const fullPage = {
+  height: '100vh'
+};
 
 function MarketSchedule() {
   return (
-    <div>
+    <div style={fullPage}>
       <hr/>
       {data.masterSchedule.map((marketDay, index) =>
         <MarketDay day = {marketDay.day}
@@ -17,5 +22,7 @@ function MarketSchedule() {
     </div>
   );
 }
+
+
 
 export default MarketSchedule;
