@@ -5,7 +5,9 @@ import SeasonalOfferings from './SeasonalOfferings';
 
 const fullPage = {
   height: '100vh',
-  background: 'tan'
+  background: 'tan',
+  overflow: 'auto',
+  maxWidth: '300px'
 };
 
 function ProduceMonth() {
@@ -13,10 +15,10 @@ function ProduceMonth() {
     <div style={fullPage}>
       <hr/>
       {data.availableProduce.map((monthObject, index)  =>
-        <SeasonalOfferings month = {monthObject.month}
-          selection = {monthObject.selection}
-          key = {index}
-        />
+        <SeasonalOfferings
+        month = {monthObject.month}
+        selection = {monthObject.selection}
+        key = {index} />
       )}
     </div>
   );
