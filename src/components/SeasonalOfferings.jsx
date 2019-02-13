@@ -4,24 +4,25 @@ import PropTypes from 'prop-types';
 function SeasonalOfferings({month, selection}) {
   const autoGrid = {
     overflow: 'auto',
-    border: '1px black solid',
-    // display: 'grid',
-    // gridTemplateColumns: 'repeat(7, 10px)',
-    // gridAutoRows: 'fit-content(1fr)'
-  }
+    border: '5px white solid',
+    borderRadius: '25px',
+    backgroundColor: 'rgba(255, 255, 255, 0.6)',
+  };
   const listDisplayGridItem = {
-    border: '2px blue solid',
-    backgroundColor: 'lightgreen',
+    border: '2px solid white',
+    borderRadius: '20px',
+    backgroundColor: '#2e282e',
+    color: '#00b529',
     display: 'block',
     width: '99%',
     position:'sticky',
     left: '0',
     top: '0'
-  }
+  };
   const itemList = {
     display: 'grid',
     gridTemplate: 'repeat(12, 20px) / repeat(3, 1fr)'
-  }
+  };
   return (
     <div style={autoGrid}>
       <div style={listDisplayGridItem}>
