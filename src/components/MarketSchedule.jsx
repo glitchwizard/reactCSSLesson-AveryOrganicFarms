@@ -20,7 +20,24 @@ function MarketSchedule() {
     <div style={fullPage}>
       <img src="https://i.imgur.com/UcFmlHN.png" style={{width: '80%', display: 'block', margin: 'auto'}}></img>
       <hr/>
-      <div style={twoColumns}>
+      <div className='two-columns'>
+        <style jsx>{`
+          @media (min-width: 751px) {
+            .two-columns {
+              display: grid;
+              grid-template: 1fr / 1fr 1fr;
+            }
+          }
+          
+          @media (max-width: 750px) {
+            .two-columns {
+              display: grid;
+              grid-template: 1fr / 1fr;
+            }
+          }
+        `}
+        </style>
+
         <div>
           {data.masterSchedule.map((marketDay, index) =>
             <MarketDay day = {marketDay.day}

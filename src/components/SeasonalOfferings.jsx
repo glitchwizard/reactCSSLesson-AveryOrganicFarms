@@ -8,6 +8,7 @@ function SeasonalOfferings({month, selection}) {
     borderRadius: '25px',
     backgroundColor: 'rgba(255, 255, 255, 0.6)',
   };
+  
   const listDisplayGridItem = {
     border: '2px solid white',
     borderRadius: '20px',
@@ -19,10 +20,12 @@ function SeasonalOfferings({month, selection}) {
     left: '0',
     top: '0'
   };
+
   const itemList = {
     display: 'grid',
     gridTemplate: 'repeat(12, 20px) / repeat(3, 1fr)'
   };
+
   return (
     <div style={autoGrid}>
       <div style={listDisplayGridItem}>
